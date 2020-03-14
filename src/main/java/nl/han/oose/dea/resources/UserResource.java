@@ -3,6 +3,7 @@ package nl.han.oose.dea.resources;
 import nl.han.oose.dea.services.UserService;
 import nl.han.oose.dea.services.dto.UserDTO;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -12,8 +13,9 @@ public class UserResource {
 
     private UserService userService;
 
-    public UserResource() {
-        userService = new UserService();
+    @Inject
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 
     @POST
