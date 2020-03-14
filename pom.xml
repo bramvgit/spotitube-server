@@ -21,6 +21,12 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.airhacks</groupId>
+      <artifactId>jaxrs-cors</artifactId>
+      <version>0.0.1</version>
+      <scope>compile</scope>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
