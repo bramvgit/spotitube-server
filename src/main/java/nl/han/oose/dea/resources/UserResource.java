@@ -23,6 +23,6 @@ public class UserResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response postLogin(UserDTO userDTO) {
-        return Response.accepted(userService.login(userDTO)).status(Response.Status.CREATED).build();
+        return Response.ok(userService.login(userDTO)).status(Response.Status.CREATED).build();
     }
 }
