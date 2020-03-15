@@ -1,6 +1,6 @@
 package nl.han.oose.dea.resources;
 
-import nl.han.oose.dea.services.UserService;
+import nl.han.oose.dea.services.interfaces.UserService;
 import nl.han.oose.dea.services.dto.UserDTO;
 import nl.han.oose.dea.services.exceptions.IncorrectLoginCredentialsException;
 import org.junit.jupiter.api.BeforeEach;

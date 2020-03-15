@@ -1,23 +1,21 @@
-package nl.han.oose.dea.services.interfaces;
+package nl.han.oose.dea.services;
 
-import nl.han.oose.dea.services.UserService;
 import nl.han.oose.dea.services.dto.TokenDTO;
 import nl.han.oose.dea.services.dto.UserDTO;
 import nl.han.oose.dea.services.exceptions.IncorrectLoginCredentialsException;
+import nl.han.oose.dea.services.interfaces.UserService;
 
 public class SpotitubeUserService implements UserService {
-    public static final String USERNAME = "bram";
-    public static final String PASSWORD = "pass";
 
     @Override
     public TokenDTO login(UserDTO userDTO) {
         if (correctCredentials(userDTO)) {
-            return new TokenDTO("1234-1234-1234", userDTO.getUser());
+            return new TokenDTO(UserService.TOKEN, userDTO.getUser());
         }
         throw new IncorrectLoginCredentialsException();
     }
 
     private boolean correctCredentials(UserDTO userDTO) {
-        return userDTO.getUser().equalsIgnoreCase(USERNAME) && userDTO.getPassword().equalsIgnoreCase(PASSWORD);
+        return userDTO.getUser().equalsIgnoreCase(UserService.USERNAME) && userDTO.getPassword().equalsIgnoreCase(UserService.PASSWORD);
     }
 }
