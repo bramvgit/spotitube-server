@@ -8,7 +8,6 @@ import nl.han.oose.dea.services.interfaces.UserService;
 import java.util.*;
 
 public class SpotitubePlaylistService implements PlaylistService {
-    private List<PlaylistDTO> playlistDTOS = new ArrayList<>();
 
     @Override
     public Map<String, Object> getAll(String token) {
@@ -16,10 +15,10 @@ public class SpotitubePlaylistService implements PlaylistService {
             throw new IncorrectTokenException();
         }
 
-        playlistDTOS = Arrays.asList(
-                new PlaylistDTO(1, "Pop", true, new String[]{}),
-                new PlaylistDTO(2, "Death metal", true, new String[]{}),
-                new PlaylistDTO(3, "Soul", false, new String[]{})
+        List<PlaylistDTO> playlistDTOS = Arrays.asList(
+                new PlaylistDTO(1, "Pop", true, Arrays.asList()),
+                new PlaylistDTO(2, "Death metal", true, Arrays.asList()),
+                new PlaylistDTO(3, "Soul", false, Arrays.asList())
         );
 
         Map<String, Object> playlists = new HashMap<String, Object>();

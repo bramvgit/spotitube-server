@@ -17,8 +17,8 @@ public class UserResource {
         this.userService = userService;
     }
 
-    @POST
     @Path("/login")
+    @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response postLogin(UserDTO userDTO) {
