@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>nl.han.oose.dea</groupId>
@@ -10,7 +10,6 @@
   <packaging>war</packaging>
 
   <name>spotitube</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -21,17 +20,22 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>com.airhacks</groupId>
-      <artifactId>jaxrs-cors</artifactId>
-      <version>0.0.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.6.0</version>
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>8.0.19</version>
+      </dependency>
+      <dependency>
+          <groupId>com.airhacks</groupId>
+          <artifactId>jaxrs-cors</artifactId>
+          <version>0.0.1</version>
+          <scope>compile</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-engine</artifactId>
+          <version>5.6.0</version>
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
@@ -43,17 +47,23 @@
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-common -->
     <dependency>
-      <groupId>org.glassfish.jersey.core</groupId>
-      <artifactId>jersey-common</artifactId>
-      <version>2.30.1</version>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-common</artifactId>
+        <version>2.30.1</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>3.3.0</version>
-      <scope>test</scope>
-    </dependency>
+      <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+      <dependency>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-core</artifactId>
+          <version>3.3.0</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.microsoft.sqlserver</groupId>
+          <artifactId>mssql-jdbc</artifactId>
+          <version>8.2.1.jre13</version>
+          <scope>compile</scope>
+      </dependency>
   </dependencies>
 
   <build>
